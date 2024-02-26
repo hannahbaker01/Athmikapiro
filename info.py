@@ -47,13 +47,13 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID')
 reqst_channel = environ.get('REQST_CHANNEL_ID')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
-SUPPORT_CHAT_ID = -1001792675255
+SUPPORT_CHAT_ID = -1001925060516
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "PIRO")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'FILES')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb://clsy76bj0000fa4mecri20scm:09bFo3FqZbAen3BFSmzq8f5Z@104.251.218.202:9006/?readPreference=primary&ssl=false")
+DATABASE_NAME = environ.get('DATABASE_NAME', "athmika")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
